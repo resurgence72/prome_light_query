@@ -1,0 +1,9 @@
+groups:
+- name: auto-heavy-query-replace
+  rules:
+  - record: PHQ:746d31bcc9017359ba7d395974fadfad
+    expr: sum(rate(prometheus_engine_query_log_failures_total[1m]))
+  - record: PHQ:887367f3abb17c19411a0af80796f618
+    expr: sum(rate(go_gc_duration_seconds_count[1m]))
+  - record: PHQ:ab1d264b2dac31d57d9e1a0c381344cd
+    expr: sum(rate(prometheus_engine_query_log_failures_total[5m]))
